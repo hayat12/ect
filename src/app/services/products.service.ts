@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Product } from '../shared/interface/product.interface';
 
 @Injectable({
@@ -68,7 +68,7 @@ export class ProductsService {
       }
     }
   ];
-  getProducts() {
-    return of(this.products);
+  getProducts():Observable<Array<Product>>{
+    return of<Array<Product>>(this.products);
   }
 }
