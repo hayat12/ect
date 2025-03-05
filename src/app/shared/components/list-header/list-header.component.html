@@ -1,0 +1,11 @@
+<div class="list-header">
+  <ng-container *ngFor="let col of columns">
+  <div *ngIf="col.sortable; else staticColumn" (click)="onSort(col.value)" class="active-col list-cell">
+    {{ col.text }}
+    <span>{{ getSortIndicator(col.value) }}</span>
+  </div>
+  <ng-template #staticColumn>
+    <div class="list-cell">{{ col.text }}</div>
+  </ng-template>
+</ng-container>
+</div>

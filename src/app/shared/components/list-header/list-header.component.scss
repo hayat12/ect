@@ -1,0 +1,23 @@
+.list-header {
+  display: flex;
+  background-color: #19826E;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: none;
+}
+.list-cell {
+  flex: 1;
+  padding: 12px 15px;
+  text-align: left;
+  border-right: none;
+
+    &.active-col {
+      cursor: pointer;
+      font-weight: bold;
+    }
+}
+.list-header{
+  background-color: #19826E;
+  color: #ffffff;
+  padding: 12px 15px;
+}

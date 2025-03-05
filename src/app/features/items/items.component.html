@@ -1,0 +1,22 @@
+<div>
+  <ect-page-header>
+    <ng-template>
+      <h1>Listing Page</h1>
+    </ng-template>
+  </ect-page-header>
+
+</div>
+<div class="container">
+  <ect-list-header [columns]="columns" (sortChange)="onSortChange($event)"></ect-list-header>
+  <ng-container *ngIf="(items$ | async ) as data; else elseTemplate">
+    <ect-repeater [data]="data" [sortDirection]="sortDirection" [sortField]="sortField">
+      <ng-template let-item="item" let-i="index">
+        <ect-item [item]="item"/>
+      </ng-template>
+    </ect-repeater>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+    <h3 class="no-data">No data available</h3>
+  </ng-template>
+</div>
