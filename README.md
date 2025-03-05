@@ -1,4 +1,3 @@
-
 ## **Project Structure**
   - app/:
     - features/:
@@ -6,6 +5,7 @@
         - item listing
         - responsive design
         - dynamic content using ngTemplateOutlet for Template injection
+        - implemented united testing
     - shared/: Contains shared components, directives, interface, enum and pipes.
     - questions/: question no 1 no2 and no 3.
     - services/: Contains services for handling the logic and data
